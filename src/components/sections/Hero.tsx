@@ -24,16 +24,16 @@ export function Hero({
     return (
       <section className="relative h-192 overflow-hidden bg-[#193962] max-md:h-auto max-md:min-h-175">
         <Image
-          className="absolute inset-x-0 bottom-0 h-169.5 w-full object-cover"
+          className="absolute inset-x-0 bottom-0 h-full w-full object-cover"
           src="/images/home-hero-bg.png"
           alt="Modern laundry room"
           width={1440}
           height={678}
           priority
         />
-        <div className="absolute inset-x-0 bottom-0 h-169.5 bg-[linear-gradient(90deg,rgba(25,57,98,.95)_0%,rgba(25,57,98,.8)_42%,rgba(25,57,98,0)_78%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-full sm:bg-[linear-gradient(90deg,rgba(25,57,98,.95)_0%,rgba(25,57,98,.8)_42%,rgba(25,57,98,0)_78%)] bg-[linear-gradient(90deg,rgba(25,57,98,.95)_20%,rgba(25,57,98,.8)_42%,rgba(25,57,98,0)_98%)]" />
         <Image
-          className="absolute -right-2.75 bottom-0 h-152.5 w-204.5 object-contain object-bottom max-md:opacity-35"
+          className="absolute -right-2.75 bottom-0 h-152.5 w-204.5 object-contain object-bottom max-md:hidden"
           src="/images/home-hero-person.png"
           alt="Smiling laundry professional holding folded clothes"
           width={818}
@@ -42,7 +42,7 @@ export function Hero({
         />
         <Header />
         <div
-          className={`relative z-2 flex h-192 items-center pt-22.5 max-md:h-auto max-md:min-h-175 max-md:pt-32.5 ${shell}`}
+          className={`relative z-2 flex h-192 sm:items-center pt-35.5 sm:pt-22.5 max-md:h-auto max-md:min-h-175  ${shell}`}
         >
           <div className="relative z-2 w-140 text-white">
             <h1 className="mb-4.75 text-[52px] leading-[1.3] font-normal tracking-tight max-sm:text-[38px] [&_em]:font-black [&_em]:not-italic">

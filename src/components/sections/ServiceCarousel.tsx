@@ -48,9 +48,9 @@ export function ServiceCarousel({ slides }: { slides: readonly ServiceSlide[] })
     >
       <div className="flex w-max gap-6">
         {slides.map((service) => (
-          <article className="w-[362px] shrink-0 snap-start max-sm:w-[calc(100vw-60px)]" key={service.title}>
-            <div className="relative h-[306px] overflow-hidden"><Image className="object-cover" src={service.image} alt={service.title} fill sizes="(max-width: 640px) calc(100vw - 60px), 362px" /></div>
-            <div className="px-5 pt-[18px]"><h3 className="text-2xl font-bold">{service.title}</h3><p className="mt-1.5 text-black/80">{service.description}</p></div>
+          <article className="w-[362px] shrink-0 snap-start max-sm:w-[calc(100vw-64px)]" key={service.title}>
+            <div className="relative h-[306px] overflow-hidden max-sm:h-auto max-sm:aspect-[362/306]"><Image className="object-cover" src={service.image} alt={service.title} fill sizes="(max-width: 640px) calc(100vw - 64px), 362px" /></div>
+            <div className="px-5 pt-[18px] max-sm:px-1"><h3 className="text-2xl font-bold max-sm:text-[21px]">{service.title}</h3><p className="mt-1.5 text-black/80">{service.description}</p></div>
           </article>
         ))}
       </div>

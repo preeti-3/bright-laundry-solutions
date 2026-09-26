@@ -32,7 +32,7 @@ export function TestimonialFaq() {
 export function Stats({ items, overlap = true, featured = false }: { items: readonly (readonly [string, string])[]; overlap?: boolean; featured?: boolean }) {
   return (
     <section className={`${shell} relative z-[4] grid min-h-[136px] grid-cols-4 gap-6 max-lg:grid-cols-2 max-sm:gap-3 ${overlap ? "-mt-[68px]" : "mt-0"}`}>
-      {items.map(([value, label], index) => <article className={`flex min-h-[136px] flex-col items-center justify-center border border-black/10 p-5 text-center shadow-[0_0_30px_rgba(0,0,0,.08)] ${featured && index === 0 ? "bg-[#89b92f] text-white" : featured ? "bg-[#eef6dc]" : "bg-[linear-gradient(180deg,rgba(241,245,248,.85),#fff)]"}`} key={label}><strong className={`${displayHeading} text-[34px] leading-none ${featured && index !== 0 ? "font-bold text-[#89b92f]" : "text-[#193962]"}`}>{value}</strong><span className="mt-2">{label}</span></article>)}
+      {items.map(([value, label]) => <article className={`group flex min-h-[136px] flex-col items-center justify-center border border-black/10 p-5 text-center shadow-[0_0_30px_rgba(0,0,0,.08)] transition-colors duration-200 ${featured ? "bg-[#eef6dc] hover:bg-[#89b92f] hover:text-white" : "bg-[linear-gradient(180deg,rgba(241,245,248,.85),#fff)]"}`} key={label}><strong className={`${displayHeading} text-[34px] leading-none transition-colors duration-200 ${featured ? "font-bold text-[#89b92f] group-hover:text-[#193962]" : "text-[#193962]"}`}>{value}</strong><span className="mt-2">{label}</span></article>)}
     </section>
   );
 }

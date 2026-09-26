@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { displayHeading } from "@/lib/styles";
 
 const labelClass = "block text-[16px]";
@@ -12,7 +13,7 @@ export function FranchiseForm() {
     <h2 className={`${displayHeading} mb-[26px] text-[25px] font-bold`}>Your Information</h2>
     <div className="grid grid-cols-2 gap-x-5 gap-y-5 max-sm:grid-cols-1"><label className={labelClass}>First Name*<input className={fieldClass} name="firstName" autoComplete="given-name" required placeholder="Johan" /></label><label className={labelClass}>Last Name*<input className={fieldClass} name="lastName" autoComplete="family-name" required placeholder="Johan" /></label><label className={labelClass}>Phone No*<input className={fieldClass} name="phone" type="tel" autoComplete="tel" required placeholder="00000" /></label><label className={labelClass}>Email Address*<input className={fieldClass} name="email" type="email" autoComplete="email" required placeholder="johangmail.com" /></label></div>
     <label className={`${labelClass} mt-5`}>Your Message<textarea className={`${fieldClass} h-[118px] resize-y`} name="message" rows={4} placeholder="Hi, ...." /></label>
-    <label className="my-5 flex items-start gap-1.5 text-[16px]"><input className="mt-1 size-[17px]" name="consent" type="checkbox" required /> <span>I agree to the <a className="text-[#0ea5e9]" href="#privacy">Privacy Policy</a> and <a className="text-[#0ea5e9]" href="#terms">Term &amp; condition</a></span></label>
+    <label className="my-5 flex items-start gap-1.5 text-[16px]"><input className="mt-1 size-[17px]" name="consent" type="checkbox" required /> <span>I agree to the <Link className="text-[#0ea5e9]" href="/privacy-policy">Privacy Policy</Link> and <Link className="text-[#0ea5e9]" href="/terms">Terms &amp; Conditions</Link></span></label>
     <button className="flex h-[52px] w-full cursor-pointer items-center justify-center bg-[#89b92f] text-[18px] font-bold text-white transition-colors hover:bg-[#78a528] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#193962]" type="submit">Submit →</button>
     <p className="mt-2 text-sm text-[#7a4c00]" aria-live="polite">{message}</p>
   </form>;

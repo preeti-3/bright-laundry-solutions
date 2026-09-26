@@ -8,7 +8,7 @@ export function Footer() {
     "flex flex-col gap-[11px] [&_a]:opacity-70 [&_a]:transition-opacity [&_a:hover]:opacity-100";
   return (
     <footer className="relative text-white">
-      <div className="relative flex h-47.5 items-center justify-between gap-8 overflow-hidden px-[max(40px,calc((100%-1280px)/2))] max-md:h-auto max-md:min-h-47.5 max-md:flex-col max-md:items-start max-md:justify-center max-sm:px-5">
+      <div className="relative flex h-47.5 items-center justify-between gap-8 overflow-hidden px-[max(40px,calc((100%-1280px)/2))] max-md:h-auto max-md:min-h-[250px] max-md:flex-col max-md:items-start max-md:justify-center max-md:px-6 max-md:py-10 max-sm:px-4">
         <Image
           className="object-cover"
           src="/images/figma/footer-cta.png"
@@ -28,7 +28,7 @@ export function Footer() {
           </p>
         </div>
         <Link
-          className={`${primaryButton} relative z-2 min-w-49.25 bg-white! text-[#89b92f]! hover:bg-[#f5ffe5]!`}
+          className={`${primaryButton} relative z-2 min-w-49.25 bg-white! text-[#89b92f]! hover:bg-[#f5ffe5]! max-sm:w-full`}
           href="/get-franchise"
         >
           Get Franchise →
@@ -43,7 +43,7 @@ export function Footer() {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-[#0d3f73]/78" />
-        <div className="relative z-2 flex h-full flex-col justify-between px-[max(40px,calc((100%-1280px)/2))] py-13.5 max-sm:px-5 max-sm:py-10">
+        <div className="relative z-2 flex h-full flex-col justify-between px-[max(40px,calc((100%-1280px)/2))] py-13.5 max-md:px-6 max-sm:px-4 max-sm:py-10">
           <div className="grid grid-cols-[1.6fr_.75fr_.75fr_1.25fr] gap-15 max-lg:gap-8 max-md:grid-cols-2 max-sm:grid-cols-1">
             <div className="flex flex-col gap-3.75 [&_a_span]:text-white [&_a_strong]:text-white">
               <Logo />
@@ -75,7 +75,13 @@ export function Footer() {
           </div>
           <div className="flex justify-between border-t border-white/20 pt-7 text-[14px] opacity-80 max-sm:mt-10 max-sm:flex-col max-sm:gap-2">
             <span>© 2026 BRIGHT LAUNDRY SOLUTIONS</span>
-            <span>Privacy · Terms · Accessibility</span>
+            <span className="flex flex-wrap gap-x-2">
+              <Link className="transition-opacity hover:opacity-75" href="/privacy-policy">Privacy</Link>
+              <span aria-hidden="true">·</span>
+              <Link className="transition-opacity hover:opacity-75" href="/terms">Terms</Link>
+              <span aria-hidden="true">·</span>
+              <a className="transition-opacity hover:opacity-75" href="#main-content">Accessibility</a>
+            </span>
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Header } from "@/components/layout/Header";
 import { FranchiseForm } from "@/components/sections/FranchiseForm";
 import { MarketChart } from "@/components/sections/MarketChart";
@@ -9,12 +8,33 @@ import { displayHeading, shell } from "@/lib/styles";
 
 export const metadata = pageMetadata("Get Franchise", "Submit an inquiry to start your Bright Laundry Solutions franchise journey.");
 
+function ContactIcon({ src }: { src: string }) {
+  return (
+    <span className="grid size-[47px] shrink-0 place-items-center rounded-full border border-[#193962]/10">
+      <span
+        aria-hidden="true"
+        className="block size-[25px] bg-[#89b92f]"
+        style={{
+          WebkitMaskImage: `url(${src})`,
+          WebkitMaskPosition: "center",
+          WebkitMaskRepeat: "no-repeat",
+          WebkitMaskSize: "contain",
+          maskImage: `url(${src})`,
+          maskPosition: "center",
+          maskRepeat: "no-repeat",
+          maskSize: "contain",
+        }}
+      />
+    </span>
+  );
+}
+
 export default function GetFranchisePage() {
   return <>
     <section className="relative h-[789px] bg-[linear-gradient(130deg,#fff_20%,#f7faf8_100%)] max-md:h-auto max-md:pb-[80px]">
       <Header />
       <div className={`${shell} grid grid-cols-[578.5px_1fr] gap-[33.5px] pt-[180px] max-lg:grid-cols-2 max-lg:gap-8 max-md:grid-cols-1 max-md:pt-[120px]`}>
-        <div><h1 className={`${displayHeading} text-[48px] leading-[1.2] capitalize max-sm:text-[38px] [&_em]:font-black [&_em]:not-italic [&_em]:text-[#89b92f]`}>Submit Application for <em>Bright Laundry Solutions</em></h1><p className="mt-[19px] max-w-[578px] text-[20px] leading-normal text-black/60">Your BRIGHT Laundry Solutions journey starts with one conversation. Let&apos;s build your business together.</p><div className="mt-6 grid gap-6"><div className="flex items-center gap-[10px]"><span className="grid size-[47px] place-items-center rounded-full border border-[#193962]/10"><Image src="/images/mail.svg" alt="" width={24} height={24} /></span><p><strong className="block">Email Address</strong><a className="text-black/60" href="mailto:hello@brightlaundrysolutions.com">hello@brightlaundrysolutions.com</a></p></div><div className="flex items-center gap-[10px]"><span className="grid size-[47px] place-items-center rounded-full border border-[#193962]/10"><Image src="/images/phone.svg" alt="" width={25} height={25} /></span><p><strong className="block">Contact US</strong><a className="text-black/60" href="tel:+917027977081">+91 70279-77081</a></p></div></div></div>
+        <div><h1 className={`${displayHeading} text-[48px] leading-[1.2] capitalize max-sm:text-[38px] [&_em]:font-black [&_em]:not-italic [&_em]:text-[#89b92f]`}>Submit Application for <em>Bright Laundry Solutions</em></h1><p className="mt-[19px] max-w-[578px] text-[20px] leading-normal text-black/60">Your BRIGHT Laundry Solutions journey starts with one conversation. Let&apos;s build your business together.</p><div className="mt-6 grid gap-6"><div className="flex items-center gap-[10px]"><ContactIcon src="/images/mail.svg" /><p><strong className="block">Email Address</strong><a className="text-black/60" href="mailto:hello@brightlaundrysolutions.com">hello@brightlaundrysolutions.com</a></p></div><div className="flex items-center gap-[10px]"><ContactIcon src="/images/phone.svg" /><p><strong className="block">Contact US</strong><a className="text-black/60" href="tel:+917027977081">+91 70279-77081</a></p></div></div></div>
         <FranchiseForm />
       </div>
     </section>

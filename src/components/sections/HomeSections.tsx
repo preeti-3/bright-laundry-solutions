@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { Button } from "@/components/ui/Button";
 import { FaqList } from "./FaqList";
 import { ServiceCarousel } from "./ServiceCarousel";
+import { shell } from "@/lib/styles";
 
 const services = [
   {
@@ -63,8 +64,8 @@ function Feature({
 
 export function HomeIntro() {
   return (
-    <section className="relative mx-auto flex h-156.75 w-[min(1140px,calc(100%-40px))] items-start justify-between pt-37.5 max-md:h-auto max-md:flex-col max-md:gap-12 max-md:py-20">
-      <div className="relative h-119.25 w-141 max-lg:w-[49%] max-md:h-107.5 max-md:w-full">
+    <section className={`${shell} relative flex h-156.75 items-start justify-between pt-37.5 max-md:h-auto max-md:flex-col max-md:gap-10 max-md:py-[72px]`}>
+      <div className="relative h-119.25 w-141 max-lg:w-[49%] max-md:h-[370px] max-md:w-full">
         <div className="absolute top-0 left-0 h-99 w-126 max-lg:w-[90%]">
           <Image
             className="object-cover"
@@ -74,7 +75,7 @@ export function HomeIntro() {
             sizes="(max-width: 768px) 100vw, 504px"
           />
         </div>
-        <div className="absolute right-0 bottom-0 h-71.75 w-65.5 border-[6px] border-white bg-white shadow-[0_0_30px_rgba(0,0,0,.1)] max-sm:h-[235px] max-sm:w-[215px]">
+        <div className="absolute right-0 bottom-0 h-71.75 w-65.5 border-[6px] border-white bg-white shadow-[0_0_30px_rgba(0,0,0,.1)] max-sm:h-[220px] max-sm:w-[200px]">
           <Image
             className="object-cover"
             src="/images/home-intro-overlay.png"
@@ -85,7 +86,7 @@ export function HomeIntro() {
         </div>
       </div>
       <div className="mt-5.5 w-126 max-lg:w-[46%] max-md:mt-0 max-md:w-full">
-        <h2 className="mb-2.5 text-[48px] leading-[1.13] font-normal tracking-[-.035em] capitalize max-lg:text-[40px] max-sm:text-[34px]">
+        <h2 className="mb-2.5 text-[48px] leading-[1.13] font-normal tracking-[-.035em] capitalize max-lg:text-[40px] max-sm:text-[32px]">
           Your Trusted Laundry &amp; Dry Cleaning{" "}
           <strong className="font-black text-[#89b92f]">Solutions</strong>
         </h2>
@@ -118,7 +119,7 @@ export function Services() {
   return (
     <section
       id="services"
-      className="relative h-308.75 overflow-hidden pt-37.5 max-md:h-auto max-md:py-20"
+      className="relative h-308.75 overflow-hidden pt-37.5 max-md:h-auto max-md:py-[72px]"
     >
       <Image
         className="pointer-events-none absolute top-0 -right-3.75 h-75 w-47.5 object-contain opacity-45"
@@ -127,8 +128,8 @@ export function Services() {
         width={190}
         height={300}
       />
-      <div className="mx-auto w-[min(1140px,calc(100%-40px))]">
-        <h2 className="mx-auto w-190.75 max-w-full text-center text-[48px] leading-[1.13] tracking-[-.035em] max-sm:text-[34px]">
+      <div className={shell}>
+        <h2 className="mx-auto w-190.75 max-w-full text-center text-[48px] leading-[1.13] tracking-[-.035em] max-sm:text-[32px]">
           Everything your{" "}
           <strong className="font-black text-[#89b92f]">
             laundry business
@@ -141,12 +142,12 @@ export function Services() {
         <div className="mt-12.5 text-center">
           <Button href="/franchise">View All →</Button>
         </div>
-        <div className="mt-12.5 grid min-h-46.75 grid-cols-[322px_repeat(3,1fr)] items-center gap-7.5 border border-black/10 bg-white px-7.5 shadow-[0_10px_30px_rgba(0,0,0,.1)] max-lg:grid-cols-2 max-md:mt-12 max-md:grid-cols-1 max-md:gap-7 max-md:py-8">
+        <div className="mt-12.5 grid min-h-46.75 grid-cols-[322px_repeat(3,1fr)] items-center gap-7.5 border border-black/10 bg-white px-7.5 shadow-[0_10px_30px_rgba(0,0,0,.1)] max-lg:grid-cols-2 max-md:mt-12 max-md:grid-cols-1 max-md:gap-7 max-md:px-5 max-md:py-7">
           <div>
             <p className="mb-3 text-xs font-bold tracking-[.08em]">
               HOW IT WORKS
             </p>
-            <h2 className="text-[36px] leading-[1.14] tracking-[-.035em]">
+            <h2 className="text-[36px] leading-[1.14] tracking-[-.035em] max-sm:text-[30px]">
               From first call to grand opening
             </h2>
           </div>
@@ -182,9 +183,9 @@ export function BusinessSolutions() {
         width={190}
         height={300}
       />
-      <div className="relative z-1 flex items-center justify-end px-17.5 max-lg:px-10 max-md:justify-start max-md:px-6 max-md:py-20">
+      <div className="relative z-1 flex items-center justify-end px-17.5 max-lg:px-10 max-md:justify-start max-md:px-6 max-md:py-[72px] max-sm:px-4">
         <div className="max-w-130">
-          <h2 className="text-[48px] leading-[1.13] tracking-[-.035em] max-sm:text-[34px]">
+          <h2 className="text-[48px] leading-[1.13] tracking-[-.035em] max-sm:text-[32px]">
             B2B{" "}
             <strong className="font-black text-[#89b92f]">
               Laundry Solutions
@@ -209,7 +210,7 @@ export function BusinessSolutions() {
           <Button href="/get-franchise">Get Franchise →</Button>
         </div>
       </div>
-      <div className="relative min-h-115">
+      <div className="relative min-h-115 max-sm:min-h-[360px]">
         <Image
           className="object-cover"
           src="/images/owner-consultation.png"
@@ -233,8 +234,8 @@ export function Testimonial() {
         sizes="100vw"
       />
       <div className="absolute inset-0 bg-[#103f70]/70" />
-      <div className="relative z-1 mx-auto grid w-[min(1140px,calc(100%-40px))] grid-cols-[230px_1fr] items-center gap-12 max-md:grid-cols-1 max-md:py-14">
-        <div className="relative h-57.5 overflow-hidden border-[6px] border-white shadow-xl">
+      <div className={`relative z-1 mx-auto grid ${shell} grid-cols-[230px_1fr] items-center gap-12 max-md:grid-cols-1 max-md:gap-7 max-md:py-14`}>
+        <div className="relative h-57.5 overflow-hidden border-[6px] border-white shadow-xl max-md:h-[140px] max-md:w-[140px]">
           <Image
             className="object-cover object-[45%_30%]"
             src="/images/service-b2b.png"
@@ -244,7 +245,7 @@ export function Testimonial() {
           />
         </div>
         <blockquote>
-          <p className="text-[25px] leading-[1.45]">
+          <p className="text-[25px] leading-[1.45] max-sm:text-[20px]">
             “They gave us the confidence, systems, and team to build something
             our whole community values.”
           </p>
@@ -262,9 +263,9 @@ export function HomeLocation() {
   return (
     <section
       id="locations"
-      className="mx-auto grid h-183 w-[min(1140px,calc(100%-40px))] grid-cols-[569px_1fr] items-center gap-13 max-lg:grid-cols-2 max-md:h-auto max-md:grid-cols-1 max-md:py-20"
+      className={`${shell} grid h-183 grid-cols-[569px_1fr] items-center gap-13 max-lg:grid-cols-2 max-md:h-auto max-md:grid-cols-1 max-md:gap-9 max-md:py-[72px]`}
     >
-      <div className="relative h-108 border border-black/10 bg-[#fff8c9] shadow-[0_0_24px_rgba(0,0,0,.08)]">
+      <div className="relative h-108 border border-black/10 bg-[#fff8c9] shadow-[0_0_24px_rgba(0,0,0,.08)] max-sm:h-auto max-sm:aspect-[569/432]">
         <Image
           className="object-cover"
           src="/images/india-markets.png"
@@ -274,7 +275,7 @@ export function HomeLocation() {
         />
       </div>
       <div>
-        <h2 className="text-[48px] leading-[1.13] tracking-[-.035em] max-sm:text-[34px]">
+        <h2 className="text-[48px] leading-[1.13] tracking-[-.035em] max-sm:text-[32px]">
           Room To Grow In The Right{" "}
           <strong className="font-black text-[#89b92f]">Neighbourhoods</strong>
         </h2>
@@ -293,16 +294,16 @@ export function HomeFaq() {
   return (
     <section
       id="faqs"
-      className="relative mx-auto h-177 w-[min(900px,calc(100%-40px))] max-md:h-auto max-md:py-20"
+      className={`${shell} relative h-177 max-w-[900px] max-md:h-auto max-md:py-[72px]`}
     >
       <Image
-        className="pointer-events-none absolute top-20 right-0 h-75 w-47.5 object-contain opacity-45"
+        className="pointer-events-none absolute top-20 right-0 h-75 w-47.5 object-contain opacity-45 max-sm:hidden"
         src="/images/bubbles-left.svg"
         alt=""
         width={190}
         height={300}
       />
-      <h2 className="text-center text-[48px] leading-[1.13] tracking-[-.035em] max-sm:text-[34px]">
+      <h2 className="text-center text-[48px] leading-[1.13] tracking-[-.035em] max-sm:text-[32px]">
         Good Questions, Clear Answers
       </h2>
       <div className="mt-[62px]">
