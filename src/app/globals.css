@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+.services-scrollbar-hidden {
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+
+.services-scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.van-drive {
+  animation: van-drive-right-to-left 12s linear infinite;
+  animation-delay: -5s;
+}
+
+@keyframes van-drive-right-to-left {
+  from { transform: translateX(110vw); }
+  to { transform: translateX(-460px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .van-drive {
+    right: 40px;
+    animation: none;
+  }
+}

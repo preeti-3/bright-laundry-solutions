@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Number Allocation Studio</title>
+  <style>
+    :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#17221f;background:#f6f7f3}*{box-sizing:border-box}body{margin:0}button,input,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.55;cursor:not-allowed}.shell{max-width:1280px;margin:auto;padding:38px 24px 80px}.topline{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:33px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.03em;font-size:19px}.logo{height:37px;width:37px;display:grid;place-items:center;background:#163d32;color:white;border-radius:12px;font-size:18px}.badge{background:#e9efe9;color:#36604c;padding:8px 13px;border-radius:50px;font-size:12px;font-weight:700}.intro{max-width:770px;margin-bottom:34px}.eyebrow{text-transform:uppercase;letter-spacing:.16em;color:#45806a;font-size:12px;font-weight:800;margin:0 0 12px}h1{font-size:clamp(35px,5vw,58px);letter-spacing:-.06em;line-height:1.05;margin:0 0 14px}h1 span{color:#528b72}.intro p:last-child{color:#68756e;line-height:1.65;max-width:650px;margin:0}.workspace{display:grid;grid-template-columns:minmax(295px,360px) minmax(0,1fr);gap:22px;align-items:start}.panel{background:#fff;border:1px solid #e5eae4;border-radius:20px;box-shadow:0 12px 30px rgba(39,61,44,.035)}.settings{padding:24px;position:sticky;top:20px}.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:23px}.section-head h2,.results-head h2{font-size:20px;letter-spacing:-.035em;margin:0}.step{font-size:12px;background:#e8f3eb;color:#327255;padding:6px 10px;border-radius:20px;font-weight:750}label{display:block;font-size:13px;font-weight:750;margin-bottom:8px}textarea,input{width:100%;border:1px solid #dce5dd;border-radius:11px;background:#fff;color:#18251e;outline:none;transition:border .15s,box-shadow .15s}textarea:focus,input:focus{border-color:#549b72;box-shadow:0 0 0 3px #d8eddd}textarea{height:94px;resize:vertical;padding:12px;line-height:1.5}input{height:43px;padding:0 12px}input[type=number]{appearance:textfield}input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none}.hint{font-size:12px;color:#78857c;margin:7px 0 0;line-height:1.45}.field{margin-bottom:19px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}.divider{height:1px;background:#edf0e9;margin:5px 0 23px}.action{width:100%;background:#183e31;color:#fff;border:0;border-radius:12px;padding:14px;font-weight:750;box-shadow:0 6px 14px #163d3222}.action:hover{background:#27553e}.notice{margin-top:17px;padding:12px 14px;border-radius:11px;background:#f2f6ef;color:#54705c;font-size:12px;line-height:1.5}.notice.error{background:#fff2ef;color:#9b423c}.results{padding:25px;min-height:560px}.results-head{display:flex;align-items:start;justify-content:space-between;gap:12px;flex-wrap:wrap}.results-head p{color:#87918a;font-size:13px;margin:7px 0 0}.ghost{border:1px solid #dae5db;background:#fff;color:#2b6147;padding:9px 13px;border-radius:10px;font-size:12px;font-weight:750}.ghost:hover{background:#eef6ef}.ghost:disabled{opacity:.45}.summary{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:24px}.stat{border:1px solid #e8ede6;background:#fbfcf9;border-radius:14px;padding:15px}.stat span{display:block;font-size:11px;font-weight:700;color:#7b8a80;text-transform:uppercase;letter-spacing:.06em;margin-bottom:7px}.stat strong{font-size:19px;letter-spacing:-.04em}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:28px 0 14px}.toolbar h3{font-size:14px;margin:0}.group-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.group{border:1px solid #e2eae2;border-radius:14px;padding:16px;min-width:0}.group-top{display:flex;justify-content:space-between;gap:8px;align-items:start}.group-title{font-size:13px;font-weight:800}.group-sub{font-size:11px;color:#88958c;margin-top:5px}.amount{font-size:15px;font-weight:800;color:#277054;white-space:nowrap}.breakdown{font-size:11px;color:#6b7c70;margin-top:5px;white-space:nowrap}.numbers{display:flex;flex-wrap:wrap;gap:6px;margin:15px 0}.num{display:inline-grid;place-items:center;min-width:32px;height:31px;border-radius:7px;background:#f1f5f0;color:#33473b;font-size:12px;font-weight:750}.num.primary{background:#dff1e4;color:#136a3d}.group-bottom{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #edf0ea;padding-top:12px}.key{color:#879489;font-size:11px}.copy{border:0;background:transparent;color:#277354;font-size:12px;font-weight:750;padding:4px}.empty{min-height:350px;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;color:#7a887d}.empty .circle{height:65px;width:65px;border-radius:19px;background:#ecf4eb;display:grid;place-items:center;font-size:29px;margin:0 auto 17px;color:#41855e}.empty strong{display:block;color:#273f30;font-size:17px}.empty p{line-height:1.55;max-width:360px;font-size:13px}.footer-note{font-size:11px;color:#96a096;margin-top:27px;text-align:center}@media(max-width:850px){.workspace{grid-template-columns:1fr}.settings{position:static}.results{min-height:400px}}@media(max-width:520px){.shell{padding:22px 14px 50px}.topline{margin-bottom:27px}.badge{display:none}.settings,.results{padding:18px}.group-grid{grid-template-columns:1fr}.summary{gap:6px}.stat{padding:11px}.stat strong{font-size:15px}.stat span{font-size:10px}.intro{margin-bottom:26px}}
+    [hidden]{display:none!important}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topline"><div class="brand"><span class="logo">#</span> Number Allocation Studio</div><span class="badge">Standalone · works offline</span></header>
+    <div class="intro"><p class="eyebrow">Your numbers, organized</p><h1>Make groups.<br><span>Balance both budgets.</span></h1><p>Assign one budget to your chosen numbers and a percentage of it to the remaining numbers. Generate a fresh allocation of every number from 00 to 99.</p></div>
+    <div class="workspace">
+      <section class="panel settings" aria-labelledby="settings-title">
+        <div class="section-head"><h2 id="settings-title">Configuration</h2><span class="step">01 / SETUP</span></div>
+        <div class="field"><label for="primary">Primary numbers</label><textarea id="primary" spellcheck="false" placeholder="01, 10, 02, 20, 03, 30, 04, 40, 05, 50">01, 10, 02, 20, 03, 30, 04, 40, 05, 50</textarea><p class="hint">Separate with commas, spaces, or new lines. Leave blank to shuffle all numbers equally. Primary numbers are highlighted and spread across groups when possible.</p></div>
+        <div class="divider"></div>
+        <div class="field"><label for="budget">Primary numbers budget target (₹)</label><input id="budget" type="number" min="0" max="1000000000" step="1" value="10000"></div>
+        <div class="field"><label for="percentage">Remaining numbers budget target (% of primary)</label><input id="percentage" type="number" min="0" max="100" step="1" value="40"><p class="hint">For ₹10,000 and 40%, the targets are ₹10,000 for primary numbers and ₹4,000 for the others. Generated totals may vary by up to 5%.</p></div>
+        <div class="pair"><div class="field"><label for="minSize">Min. numbers / group</label><input id="minSize" type="number" min="1" max="100" step="1" value="5"></div><div class="field"><label for="maxSize">Max. numbers / group</label><input id="maxSize" type="number" min="1" max="100" step="1" value="10"></div></div>
+        <div class="pair"><div class="field"><label for="minAmount">Preferred min. / group (₹)</label><input id="minAmount" type="number" min="0" max="1000000000" step="1" value="100"></div><div class="field"><label for="maxAmount">Preferred max. / group (₹)</label><input id="maxAmount" type="number" min="0" max="1000000000" step="1" value="1000"></div></div><p class="hint" style="margin:-9px 0 19px">Group amount preferences may be exceeded when needed to allocate both budgets.</p>
+        <button class="action" id="generate" type="button">Generate allocation ↗</button>
+        <div class="notice" id="message" role="status" aria-live="polite">Each number appears exactly once. The two budgets are approximate; actual amounts are shown in the result.</div>
+      </section>
+      <section class="panel results" aria-labelledby="results-title">
+        <div class="results-head"><div><h2 id="results-title">Your allocation</h2><p id="subtitle">Ready when you are.</p></div><button class="ghost" id="copyAll" disabled type="button">Copy all groups</button></div>
+        <div class="summary" id="summary" hidden><div class="stat"><span>Primary numbers</span><strong id="primaryAllocated">₹0</strong></div><div class="stat"><span>Other numbers</span><strong id="remainingAllocated">₹0</strong></div><div class="stat"><span>Combined allocation</span><strong id="allocated">₹0</strong></div><div class="stat"><span>Groups · numbers</span><strong id="groupCount">0</strong></div></div>
+        <div class="toolbar" id="toolbar" hidden><h3>Generated groups</h3><span class="key">Green = primary number</span></div>
+        <div class="group-grid" id="groups"></div>
+        <div class="empty" id="empty"><div><div class="circle">↗</div><strong>Your groups will appear here</strong><p>Set your preferences and select Generate allocation to create a random arrangement.</p></div></div>
+      </section>
+    </div>
+    <p class="footer-note">All calculations happen in this browser. Nothing is uploaded or saved.</p>
+  </main>
+  <script>
+    'use strict';
+    const $ = id => document.getElementById(id);
+    const formatMoney = n => '₹' + n.toLocaleString('en-IN');
+    const formatNumber = n => String(n).padStart(2, '0');
+    let currentGroups = [];
+
+    // Rejection sampling avoids modulo bias in the random integer range.
+    function randomInt(maxExclusive) {
+      if (!Number.isSafeInteger(maxExclusive) || maxExclusive < 1 || maxExclusive > 4294967296) throw Error('Random range is too large.');
+      const ceiling = 4294967296 - (4294967296 % maxExclusive);
+      const buffer = new Uint32Array(1);
+      do { crypto.getRandomValues(buffer); } while (buffer[0] >= ceiling);
+      return buffer[0] % maxExclusive;
+    }
+    function shuffle(items) {
+      const result = items.slice();
+      for (let i = result.length - 1; i > 0; i--) {
+        const j = randomInt(i + 1);
+        [result[i], result[j]] = [result[j], result[i]];
+      }
+      return result;
+    }
+    function integerField(id, name) {
+      const raw = $(id).value.trim();
+      const value = Number(raw);
+      if (!raw || !/^\d+$/.test(raw) || !Number.isSafeInteger(value) || value > 1000000000) throw Error(name + ' must be a whole number from 0 to 1,000,000,000.');
+      return value;
+    }
+    function parsePrimary() {
+      const raw = $('primary').value.trim();
+      if (!raw) return [];
+      const tokens = raw.split(/[\s,;]+/).filter(Boolean);
+      const values = [];
+      const seen = new Set();
+      for (const token of tokens) {
+        if (!/^\d{1,2}$/.test(token) || Number(token) > 99) throw Error('Primary numbers must be between 00 and 99, separated by commas, spaces, or new lines.');
+        const value = Number(token);
+        if (seen.has(value)) throw Error('Primary number ' + formatNumber(value) + ' is repeated. Remove duplicates and try again.');
+        seen.add(value);
+        values.push(value);
+      }
+      return values;
+    }
+    function settings() {
+      const primary = parsePrimary();
+      const budget = integerField('budget', 'Primary numbers budget');
+      const percentage = integerField('percentage', 'Remaining budget percentage');
+      const minSize = integerField('minSize', 'Minimum group size');
+      const maxSize = integerField('maxSize', 'Maximum group size');
+      const minAmount = integerField('minAmount', 'Minimum amount');
+      const maxAmount = integerField('maxAmount', 'Maximum amount');
+      if (percentage > 100) throw Error('Remaining budget percentage must be between 0 and 100.');
+      if (!primary.length && budget) throw Error('Enter at least one primary number for the primary budget.');
+      if (primary.length === 100 && percentage && budget) throw Error('All numbers are primary. There are no remaining numbers to receive the percentage budget.');
+      if (minSize < 1 || maxSize > 100 || minSize > maxSize) throw Error('Group sizes must be from 1 to 100, with minimum no higher than maximum.');
+      if (minAmount > maxAmount) throw Error('Preferred minimum amount cannot exceed preferred maximum amount.');
+      const remainingBudget = Math.round(budget * percentage / 100);
+      const eligible = [];
+      for (let count = Math.ceil(100 / maxSize); count <= Math.floor(100 / minSize); count++) {
+        eligible.push(count);
+      }
+      if (!eligible.length) {
+        throw Error('These group sizes cannot divide 100 numbers. Increase the maximum group size or reduce the minimum.');
+      }
+      return {primary, budget, remainingBudget, percentage, minSize, maxSize, minAmount, maxAmount, eligible};
+    }
+    function randomBoundedTotal(count, minimum, maximum, total) {
+      let remaining = total;
+      const values = [];
+      for (let i = 0; i < count; i++) {
+        const rest = count - i - 1;
+        const low = Math.max(minimum, remaining - rest * maximum);
+        const high = Math.min(maximum, remaining - rest * minimum);
+        const value = low + randomInt(high - low + 1);
+        values.push(value);
+        remaining -= value;
+      }
+      return shuffle(values);
+    }
+    function randomAmountsWithinBounds(minima, maxima, total) {
+      const count = minima.length;
+      const result = new Array(count);
+      const order = shuffle(Array.from({length:count}, (_, i) => i));
+      let remaining = total;
+      for (let i = 0; i < count; i++) {
+        const index = order[i];
+        const rest = order.slice(i + 1);
+        const minRest = rest.reduce((sum, j) => sum + minima[j], 0);
+        const maxRest = rest.reduce((sum, j) => sum + maxima[j], 0);
+        const low = Math.max(minima[index], remaining - maxRest);
+        const high = Math.min(maxima[index], remaining - minRest);
+        if (low > high) throw Error('Unable to fit the separate budgets within the group limits.');
+        result[index] = low + randomInt(high - low + 1);
+        remaining -= result[index];
+      }
+      return result;
+    }
+    function nearTarget(target) {
+      if (!target) return 0;
+      const deviation = Math.floor(target * 0.05);
+      return target - deviation + randomInt(2 * deviation + 1);
+    }
+    function distributeSoft(total, groups, predicate) {
+      const indices = groups.map((group, i) => predicate(group) ? i : -1).filter(i => i !== -1);
+      const result = Array(groups.length).fill(0);
+      if (!total || !indices.length) return result;
+      const weights = indices.map(() => 70 + randomInt(61));
+      const weightSum = weights.reduce((sum, weight) => sum + weight, 0);
+      let assigned = 0;
+      indices.forEach((index, i) => { result[index] = Math.floor(total * weights[i] / weightSum); assigned += result[index]; });
+      for (const index of shuffle(indices).slice(0, total - assigned)) result[index]++;
+      return result;
+    }
+    function allocate(config) {
+      const primarySet = new Set(config.primary);
+      const remainingNumbers = Array.from({length:100}, (_, i) => i).filter(n => !primarySet.has(n));
+      const actualPrimary = nearTarget(config.budget);
+      const actualRemaining = nearTarget(config.remainingBudget);
+      // Prefer the requested group amount range when feasible, then allow it to flex.
+      for (let attempt = 0; attempt < 13; attempt++) {
+        const count = config.eligible[randomInt(config.eligible.length)];
+        const sizes = randomBoundedTotal(count, config.minSize, config.maxSize, 100);
+        const groups = sizes.map(size => ({numbers:[], size, primaryAmount:0, remainingAmount:0}));
+        let toPlace = shuffle(config.primary);
+        while (toPlace.length) {
+          const order = shuffle(groups.map((_, i) => i).filter(i => groups[i].numbers.length < groups[i].size));
+          const placed = Math.min(order.length, toPlace.length);
+          for (let i = 0; i < placed; i++) groups[order[i]].numbers.push(toPlace[i]);
+          toPlace = toPlace.slice(placed);
+        }
+        const remaining = shuffle(remainingNumbers);
+        let next = 0;
+        for (const group of groups) {
+          while (group.numbers.length < group.size) group.numbers.push(remaining[next++]);
+          group.numbers = shuffle(group.numbers);
+        }
+        const pMin = groups.map(g => g.numbers.some(n => primarySet.has(n)) && g.numbers.every(n => primarySet.has(n)) ? config.minAmount : 0);
+        const pMax = groups.map(g => g.numbers.some(n => primarySet.has(n)) ? config.maxAmount : 0);
+        if (attempt < 12 && (pMin.reduce((a,b)=>a+b,0) > actualPrimary || pMax.reduce((a,b)=>a+b,0) < actualPrimary)) continue;
+        const primaryAmounts = attempt < 12 ? randomAmountsWithinBounds(pMin, pMax, actualPrimary) : distributeSoft(actualPrimary, groups, g => g.numbers.some(n => primarySet.has(n)));
+        const rMin = groups.map((g,i) => g.numbers.some(n => !primarySet.has(n)) ? Math.max(0,config.minAmount-primaryAmounts[i]) : 0);
+        const rMax = groups.map((g,i) => g.numbers.some(n => !primarySet.has(n)) ? config.maxAmount-primaryAmounts[i] : 0);
+        if (attempt < 12 && (rMin.reduce((a,b)=>a+b,0) > actualRemaining || rMax.reduce((a,b)=>a+b,0) < actualRemaining)) continue;
+        const remainingAmounts = attempt < 12 ? randomAmountsWithinBounds(rMin, rMax, actualRemaining) : distributeSoft(actualRemaining, groups, g => g.numbers.some(n => !primarySet.has(n)));
+        groups.forEach((group,i) => {
+          group.primaryAmount = primaryAmounts[i];
+          group.remainingAmount = remainingAmounts[i];
+          group.amount = primaryAmounts[i] + remainingAmounts[i];
+        });
+        return {groups, primarySet, actualPrimary, actualRemaining, limitsExceeded:groups.some(g => g.amount < config.minAmount || g.amount > config.maxAmount)};
+      }
+      throw Error('Unable to generate these groups. Check the group size settings.');
+    }
+    function groupText(group, index) { return 'Group ' + (index + 1) + '\nNumbers: ' + group.numbers.map(formatNumber).join(', ') + '\nPrimary amount: ' + formatMoney(group.primaryAmount) + '\nRemaining amount: ' + formatMoney(group.remainingAmount) + '\nGroup total: ' + formatMoney(group.amount); }
+    function showMessage(message, error = false) { $('message').textContent = message; $('message').classList.toggle('error', error); }
+    function clearResults() {
+      currentGroups = [];
+      $('groups').replaceChildren();
+      $('summary').hidden = true;
+      $('toolbar').hidden = true;
+      $('empty').hidden = false;
+      $('copyAll').disabled = true;
+      $('subtitle').textContent = 'Check the settings and generate again.';
+    }
+    function render(allocation) {
+      currentGroups = allocation.groups;
+      const fragment = document.createDocumentFragment();
+      allocation.groups.forEach((group, index) => {
+        const card = document.createElement('article'); card.className = 'group';
+        const top = document.createElement('div'); top.className = 'group-top';
+        const titleWrap = document.createElement('div');
+        const title = document.createElement('div'); title.className = 'group-title'; title.textContent = 'Group ' + String(index + 1).padStart(2, '0');
+        const sub = document.createElement('div'); sub.className = 'group-sub'; sub.textContent = group.numbers.length + ' numbers';
+        titleWrap.append(title, sub);
+        const amountWrap = document.createElement('div');
+        const amount = document.createElement('div'); amount.className = 'amount'; amount.textContent = formatMoney(group.amount);
+        const breakdown = document.createElement('div'); breakdown.className = 'breakdown'; breakdown.textContent = 'Primary ' + formatMoney(group.primaryAmount) + ' · Others ' + formatMoney(group.remainingAmount);
+        amountWrap.append(amount, breakdown);
+        top.append(titleWrap, amountWrap);
+        const numbers = document.createElement('div'); numbers.className = 'numbers';
+        group.numbers.forEach(n => { const badge = document.createElement('span'); badge.className = 'num' + (allocation.primarySet.has(n) ? ' primary' : ''); badge.textContent = formatNumber(n); numbers.append(badge); });
+        const bottom = document.createElement('div'); bottom.className = 'group-bottom';
+        const note = document.createElement('span'); note.className = 'key'; note.textContent = group.numbers.filter(n => allocation.primarySet.has(n)).length + ' primary';
+        const copy = document.createElement('button'); copy.className = 'copy'; copy.type = 'button'; copy.textContent = 'Copy group ↗';
+        copy.addEventListener('click', () => copyText(groupText(group, index), copy));
+        bottom.append(note, copy); card.append(top, numbers, bottom); fragment.append(card);
+      });
+      $('groups').replaceChildren(fragment);
+      $('groupCount').textContent = currentGroups.length + ' · 100 / 100';
+      $('primaryAllocated').textContent = formatMoney(allocation.actualPrimary);
+      $('remainingAllocated').textContent = formatMoney(allocation.actualRemaining);
+      $('allocated').textContent = formatMoney(allocation.actualPrimary + allocation.actualRemaining);
+      $('summary').hidden = false; $('toolbar').hidden = false; $('empty').hidden = true; $('copyAll').disabled = false;
+      $('subtitle').textContent = 'Freshly randomized. Select Generate allocation for another arrangement.';
+    }
+    async function copyText(value, button) {
+      try {
+        // Clipboard API can be unavailable when a file is opened directly in some browsers.
+        if (navigator.clipboard?.writeText) await navigator.clipboard.writeText(value);
+        else {
+          const temp = document.createElement('textarea'); temp.value = value; temp.style.position = 'fixed'; temp.style.opacity = '0'; document.body.append(temp); temp.select();
+          const success = document.execCommand('copy'); temp.remove(); if (!success) throw Error('Clipboard access is unavailable.');
+        }
+        const original = button.textContent; button.textContent = 'Copied ✓'; setTimeout(() => { button.textContent = original; }, 1500);
+      } catch { showMessage('Copy failed in this browser. You can still select and copy the numbers manually.', true); }
+    }
+    $('generate').addEventListener('click', () => {
+      try {
+        const config = settings();
+        const allocation = allocate(config);
+        render(allocation);
+        showMessage('Allocated ' + formatMoney(allocation.actualPrimary) + ' to primary numbers and ' + formatMoney(allocation.actualRemaining) + ' to the others.' + (allocation.limitsExceeded ? ' Some groups exceed the preferred amount range.' : ' All groups fit the preferred amount range.'));
+      } catch (error) { clearResults(); showMessage(error.message || 'Unable to generate this allocation.', true); }
+    });
+    $('copyAll').addEventListener('click', () => {
+      if (!currentGroups.length) return;
+      const primaryTotal = currentGroups.reduce((sum, group) => sum + group.primaryAmount, 0);
+      const remainingTotal = currentGroups.reduce((sum, group) => sum + group.remainingAmount, 0);
+      copyText(currentGroups.map(groupText).join('\n\n') + '\n\nPrimary total: ' + formatMoney(primaryTotal) + '\nRemaining total: ' + formatMoney(remainingTotal) + '\nCombined total: ' + formatMoney(primaryTotal + remainingTotal), $('copyAll'));
+    });
+  </script>
+</body>
+</html>

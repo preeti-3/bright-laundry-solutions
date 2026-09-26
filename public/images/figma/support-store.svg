@@ -1,0 +1,21 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="editor.svg">
+<path id="Vector" d="M20 10H32C33.1046 10 34 10.8954 34 12V28C34 29.1046 33.1046 30 32 30H20V10Z" fill="url(#paint0_linear_0_70)" fill-opacity="0.32"/>
+<path id="Vector_2" d="M28 14H24C23.7239 14 23.5 14.2239 23.5 14.5C23.5 14.7761 23.7239 15 24 15H28C28.2761 15 28.5 14.7761 28.5 14.5C28.5 14.2239 28.2761 14 28 14Z" fill="#89B92F" fill-opacity="0.25"/>
+<path id="Vector_3" d="M28 25H24C23.7239 25 23.5 25.2239 23.5 25.5C23.5 25.7761 23.7239 26 24 26H28C28.2761 26 28.5 25.7761 28.5 25.5C28.5 25.2239 28.2761 25 28 25Z" fill="#89B92F" fill-opacity="0.25"/>
+<path id="Vector_4" d="M30 17H24C23.7239 17 23.5 17.2239 23.5 17.5C23.5 17.7761 23.7239 18 24 18H30C30.2761 18 30.5 17.7761 30.5 17.5C30.5 17.2239 30.2761 17 30 17Z" fill="#89B92F" fill-opacity="0.25"/>
+<path id="Vector_5" d="M29 20H24C23.7239 20 23.5 20.2239 23.5 20.5V22.5C23.5 22.7761 23.7239 23 24 23H29C29.2761 23 29.5 22.7761 29.5 22.5V20.5C29.5 20.2239 29.2761 20 29 20Z" fill="#89B92F" fill-opacity="0.25"/>
+<path id="Vector_6" d="M9 10C9 8.89543 9.89543 8 11 8H17M31 10C31 8.89543 30.1046 8 29 8H20" stroke="#89B92F" stroke-opacity="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_7" d="M31 30C31 31.1046 30.1046 32 29 32H20M9 30C9 31.1046 9.89543 32 11 32H17" stroke="#89B92F" stroke-opacity="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_8" d="M34 15V12C34 10.8954 33.1046 10 32 10H20M20 10V6M20 10V30M34 24V28C34 29.1046 33.1046 30 32 30H20M20 30V34M6 15V12C6 10.8954 6.89543 10 8 10H17M6 24V28C6 29.1046 6.89543 30 8 30H17" stroke="#89B92F" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_9" d="M6 18V21" stroke="#89B92F" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_10" d="M34 18V21" stroke="#89B92F" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_11" d="M12 17L14.6464 19.6464C14.8417 19.8417 14.8417 20.1583 14.6464 20.3536L12 23" stroke="#89B92F" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_70" x1="20" y1="10" x2="20" y2="30" gradientUnits="userSpaceOnUse">
+<stop stop-color="#22C55E"/>
+<stop offset="1" stop-color="#22C55E" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,21 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="leads.svg">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M31 20C31 26.0751 26.0751 31 20 31V25H24.3916C24.7646 25 25.0603 24.6914 24.9895 24.3393C24.503 21.9216 22.6085 20.1111 20 20.1111V18.8889C21.4043 18.8889 22.5428 17.7945 22.5428 16.4444C22.5428 15.0944 21.4043 14 20 14V9C26.0751 9 31 13.9249 31 20Z" fill="url(#paint0_linear_0_21)" fill-opacity="0.32"/>
+<path id="Vector_2" d="M6 35C7.10457 35 8 34.1046 8 33C8 31.8954 7.10457 31 6 31C4.89543 31 4 31.8954 4 33C4 34.1046 4.89543 35 6 35Z" stroke="#111111" stroke-opacity="0.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 2"/>
+<path id="Vector_3" d="M7 9C8.65685 9 10 7.65685 10 6C10 4.34315 8.65685 3 7 3C5.34315 3 4 4.34315 4 6C4 7.65685 5.34315 9 7 9Z" stroke="#111111" stroke-opacity="0.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 2"/>
+<path id="Vector_4" d="M33.5 10C34.3284 10 35 9.32843 35 8.5C35 7.67157 34.3284 7 33.5 7C32.6716 7 32 7.67157 32 8.5C32 9.32843 32.6716 10 33.5 10Z" stroke="#193962" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M33.5 35C34.8807 35 36 33.8807 36 32.5C36 31.1193 34.8807 30 33.5 30C32.1193 30 31 31.1193 31 32.5C31 33.8807 32.1193 35 33.5 35Z" stroke="#193962" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M20 31C13.9249 31 9 26.0751 9 20C9 13.9249 13.9249 9 20 9" stroke="#193962" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 2"/>
+<path id="Vector_7" d="M20 4V36M20 31C26.0751 31 31 26.0751 31 20C31 13.9249 26.0751 9 20 9" stroke="#193962" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_8" d="M17.4572 16.4444C17.4572 17.7945 18.5957 18.8889 20 18.8889V14C18.5957 14 17.4572 15.0944 17.4572 16.4444Z" stroke="#193962" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 1.75"/>
+<path id="Vector_9" d="M20 20.1111C17.3915 20.1111 15.497 21.9216 15.0105 24.3393C14.9397 24.6914 15.2354 25 15.6084 25H20V20.1111Z" stroke="#193962" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 1.75"/>
+<path id="Vector_10" d="M20 18.8889C21.4043 18.8889 22.5428 17.7945 22.5428 16.4444C22.5428 15.0944 21.4043 14 20 14V18.8889Z" stroke="#193962" stroke-linejoin="round"/>
+<path id="Vector_11" d="M24.9895 24.3393C24.503 21.9216 22.6085 20.1111 20 20.1111V25H24.3916C24.7646 25 25.0603 24.6914 24.9895 24.3393Z" stroke="#193962" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_21" x1="25.5" y1="9" x2="25.5" y2="31" gradientUnits="userSpaceOnUse">
+<stop stop-color="#818498"/>
+<stop offset="1" stop-color="#818498" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
